@@ -1,9 +1,9 @@
 class Tgshift < Formula
   desc "The tgshift command lets you switch between terragrunt versions."
   homepage "https://warrensbox.github.io/terragrunt-switcher"
-  url "https://github.com/warrensbox/terragrunt-switcher/releases/download/0.1.118/terragrunt-switcher_0.1.118_darwin_amd64.tar.gz"
-  version "0.1.118"
-  sha256 "7f1e2996d620e9430b0bb6ddb81792c67d72455842c8679e52aed1ae80a8c364"
+  url "https://github.com/warrensbox/terragrunt-switcher/releases/download/0.1.137/terragrunt-switcher_0.1.137_darwin_amd64.tar.gz"
+  version "0.1.137"
+  sha256 "4c0e421a3305d865d490a29f1c8b887bf563d793e6ebc552f607dc5b7250ae94"
 
   def install
     bin.install "tgshift"
