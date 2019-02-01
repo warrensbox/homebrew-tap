@@ -1,9 +1,9 @@
 class Awsfind < Formula
   desc "The awsfind command lets you switch between terragrunt versions."
   homepage "https://warrensbox.github.io/aws-find"
-  url "https://github.com/warrensbox/aws-find/releases/download/0.1.215/aws-find_0.1.215_darwin_amd64.tar.gz"
-  version "0.1.215"
-  sha256 "2e21d8e9be191a14c112371fddad4ae1ac627fdb2250536374380f92c0819786"
+  url "https://github.com/warrensbox/aws-find/releases/download/0.1.417/aws-find_0.1.417_darwin_amd64.tar.gz"
+  version "0.1.417"
+  sha256 "1cb73449046b96bb1f2c41e50f6b47065d83c559d92a3b8e6c6026d6952ba9ef"
 
   def install
     bin.install "awsfind"
