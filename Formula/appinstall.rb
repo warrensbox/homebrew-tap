@@ -1,9 +1,9 @@
 class Appinstall < Formula
   desc "The appinstall command lets you install binary application from github."
   homepage "https://warrensbox.github.io/github-appinstall"
-  url "https://github.com/warrensbox/github-appinstaller/releases/download/0.1.52/github-appinstaller_0.1.52_darwin_amd64.tar.gz"
-  version "0.1.52"
-  sha256 "5fb87ebeb5ae628979e2ecdbecb725737da6954d0621dca464fa5e2c4c9cde6f"
+  url "https://github.com/warrensbox/github-appinstaller/releases/download/0.1.55/github-appinstaller_0.1.55_darwin_amd64.tar.gz"
+  version "0.1.55"
+  sha256 "8c0f1288f618f57a134551aed7cbb2d64466a9521a73a72d3182f8fcf8b0693e"
 
   def install
     bin.install "appinstall"
