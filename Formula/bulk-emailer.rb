@@ -1,9 +1,9 @@
 class BulkEmailer < Formula
   desc "The bulk-emailer command line tool lets you send messages to multiple recipients simultaneously"
   homepage "https://warrensbox.github.io/bulk-emailer"
-  url "https://github.com/warrensbox/bulk-emailer/releases/download/0.1.26/bulk-emailer_0.1.26_darwin_amd64.tar.gz"
-  version "0.1.26"
-  sha256 "d28210f6a9017f53dab607076b3738ae39d60d6d94b3293d5dfe4a1d57f8999d"
+  url "https://github.com/warrensbox/bulk-emailer/releases/download/0.1.29/bulk-emailer_0.1.29_darwin_amd64.tar.gz"
+  version "0.1.29"
+  sha256 "5fb1633e1a677275dff37855ddc791c2753e038bcb82e0fc5cb046e782cd63eb"
 
   def install
     bin.install "bulk-emailer"
