@@ -1,9 +1,9 @@
 class Tgswitch < Formula
   desc "The tgswitch command lets you switch between terragrunt versions."
   homepage "https://warrensbox.github.io/terragrunt-switcher"
-  url "https://github.com/warrensbox/terragrunt-switcher/releases/download/0.2.219/terragrunt-switcher_0.2.219_darwin_amd64.tar.gz"
-  version "0.2.219"
-  sha256 "b8179b1b5d72e6ff27895cd534e055d009566732663c5643353757c49af1ee7c"
+  url "https://github.com/warrensbox/terragrunt-switcher/releases/download/0.2.222/terragrunt-switcher_0.2.222_darwin_amd64.tar.gz"
+  version "0.2.222"
+  sha256 "80df068a9517ed5e6399fbcca516bdb89b01454aceccf670de9c734b67d08a4c"
 
   def install
     bin.install "tgswitch"
