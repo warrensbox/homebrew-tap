@@ -1,9 +1,9 @@
 class S3upload < Formula
   desc "The s3upload command lets you upload files to s3"
   homepage "https://warrensbox.github.io/s3upload"
-  url "https://github.com/warrensbox/s3upload/releases/download/0.1.34/s3upload_0.1.34_darwin_amd64.tar.gz"
-  version "0.1.34"
-  sha256 "55edab44c9561b8162e62d501c803983b972518363005f9b19f52a41a6fb2e95"
+  url "https://github.com/warrensbox/s3upload/releases/download/0.1.37/s3upload_0.1.37_darwin_amd64.tar.gz"
+  version "0.1.37"
+  sha256 "d3e2aae7cf4dd1609552774a4e836793b1661625dd0e904e38e268440f66f3da"
 
   def install
     bin.install "s3upload"
