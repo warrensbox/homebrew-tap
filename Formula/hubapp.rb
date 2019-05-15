@@ -1,9 +1,9 @@
 class Hubapp < Formula
   desc "The hubapp command lets you install binary application from github."
   homepage "https://warrensbox.github.io/hubapp"
-  url "https://github.com/warrensbox/hubapp/releases/download/0.2.96/hubapp_0.2.96_darwin_amd64.tar.gz"
-  version "0.2.96"
-  sha256 "5541ffe519c90660cdd4ea1e186f4e215f8a1760f5842d3beed824d596b81e41"
+  url "https://github.com/warrensbox/hubapp/releases/download/0.2.99/hubapp_0.2.99_darwin_amd64.tar.gz"
+  version "0.2.99"
+  sha256 "b95ea05dae42988fcf552e7a57b2ceb01e46de0adfecb4df653f41a55562857c"
 
   def install
     bin.install "hubapp"
