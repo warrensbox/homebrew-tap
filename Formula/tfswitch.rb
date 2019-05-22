@@ -1,9 +1,9 @@
 class Tfswitch < Formula
   desc "The tfswitch command lets you switch between terraform versions."
   homepage "https://warrensbox.github.io/terraform-switcher"
-  url "https://github.com/warrensbox/terraform-switcher/releases/download/0.6.696/terraform-switcher_0.6.696_darwin_amd64.tar.gz"
-  version "0.6.696"
-  sha256 "a4fada902dfda47b03950a6ba0dd2048d4b964cb4082c115adf3281f6901267e"
+  url "https://github.com/warrensbox/terraform-switcher/releases/download/0.6.697/terraform-switcher_0.6.697_darwin_amd64.tar.gz"
+  version "0.6.697"
+  sha256 "999bb0f80874e9fa70c572606ec9e58df3ca315ad781a277160607299d2d8fd1"
   
   conflicts_with "terraform"
 
