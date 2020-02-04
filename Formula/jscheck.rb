@@ -2,16 +2,16 @@
 class Jscheck < Formula
   desc "Recursively lint checks json files in you current directory and subdirectories."
   homepage "https://github.com/warrensbox/jscheck"
-  version "0.1.80"
+  version "0.1.82"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/warrensbox/jscheck/releases/download/0.1.80/jscheck_0.1.80_darwin_x86_64.tar.gz"
-    sha256 "42e2b9cdf778af75d3b7cbbb354853d883935826a885e790f3a71b15d895b8e9"
+    url "https://github.com/warrensbox/jscheck/releases/download/0.1.82/jscheck_0.1.82_darwin_x86_64.tar.gz"
+    sha256 "ec803d7bdf27348413ba8ba1e771b43fb6e40b0ef552660190c9878f5e56a924"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/jscheck/releases/download/0.1.80/jscheck_0.1.80_linux_x86_64.tar.gz"
-      sha256 "4f2a4f0c6c6d9ad7a9d47799acc1d7497c60d51f9369f2d3d5d60ee66afca8a0"
+      url "https://github.com/warrensbox/jscheck/releases/download/0.1.82/jscheck_0.1.82_linux_x86_64.tar.gz"
+      sha256 "74897ee264c741727cd49329e225f9330c4f8d1e55e6c8080a96f0d113572de9"
     end
   end
 
