@@ -2,16 +2,16 @@
 class HealthCheck < Formula
   desc "The `health-check` command line tool concurrently checks all target groups's health status"
   homepage "https://warrensbox.github.io/health-check"
-  version "0.1.101"
+  version "0.1.105"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.101/health-check_0.1.101_darwin_amd64.tar.gz"
-    sha256 "8c6365ebc4c9968cea8baec89472a0985bdb924753428896ea85dc9c1bbf8d8d"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.105/health-check_0.1.105_darwin_amd64.tar.gz"
+    sha256 "294756195f3ab22408345aaae8f204552c65f02fd7b867c236af426f6fcff7d3"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/health-check/releases/download/0.1.101/health-check_0.1.101_linux_amd64.tar.gz"
-      sha256 "0dfff4dae09474f6c16e2c7a8c0f1074c4ca88ddbce83a6349fa93ffcbceb0e2"
+      url "https://github.com/warrensbox/health-check/releases/download/0.1.105/health-check_0.1.105_linux_amd64.tar.gz"
+      sha256 "3ba52a08228631847a28a1e759874788461abfe0f49ca90f43d2440c9db99682"
     end
   end
 
