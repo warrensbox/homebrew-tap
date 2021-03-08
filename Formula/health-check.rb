@@ -5,24 +5,24 @@
 class HealthCheck < Formula
   desc "The `health-check` command line tool concurrently checks all target groups's health status"
   homepage "https://warrensbox.github.io/health-check"
-  version "0.1.183"
+  version "0.1.188"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.183/health-check_0.1.183_darwin_amd64.tar.gz"
-    sha256 "ccb6cf899e1d8694456b168ecf193c5981e6256e249bdbe5083ba70c10219b7b"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.188/health-check_0.1.188_darwin_amd64.tar.gz"
+    sha256 "58414cbc96a58b59cf135e28da757d2da37f7eb9e8005d16d5ee0c14d4c2835b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.183/health-check_0.1.183_linux_amd64.tar.gz"
-    sha256 "9ea899b8cb8eca9b5b7541f2222b3711936fa4b85109546b623da3a869b677cb"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.188/health-check_0.1.188_linux_amd64.tar.gz"
+    sha256 "6c80769dbd8d30460cf13f0eda1f0fe752f7ad00cc3016db76223cf757736e5d"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.183/health-check_0.1.183_linux_armv6.tar.gz"
-    sha256 "f987d910a6724e29eb0fc7f79bde5dc203818ad52705b847b68421337ba7903d"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.188/health-check_0.1.188_linux_armv6.tar.gz"
+    sha256 "b7fdfc474f7652f9dcbc417af4edeb5c543983cf4fe0cfef3fd45254abdf7b36"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.183/health-check_0.1.183_linux_arm64.tar.gz"
-    sha256 "942dce6a68498b249bbd20b5f255a12ec26f172cb4d227240721d7f90c794ffd"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.188/health-check_0.1.188_linux_arm64.tar.gz"
+    sha256 "cc37baa5eb7033c3ba15475f5a1fbd7c91978263ffa993a982f5f05fb542986f"
   end
 
   def install
