@@ -5,28 +5,28 @@
 class HealthCheck < Formula
   desc "The `health-check` command line tool concurrently checks all target groups's health status"
   homepage "https://warrensbox.github.io/health-check"
-  version "0.1.215"
+  version "0.1.223"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_darwin_amd64.tar.gz"
-    sha256 "f1feeac21aaa3508f62081886b688023ae4eb5c2ed747e5fecb926d424aefd03"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.223/health-check_0.1.223_darwin_amd64.tar.gz"
+    sha256 "02928a36f7924ef9a06c30679a1bf6e7a3975567c2d02befba4f0c1250e5de54"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_darwin_arm64.tar.gz"
-    sha256 "199fbf7c384ac1946a58d914f6d5881a22867181e0a2a9809d3f05ed1361af90"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.223/health-check_0.1.223_darwin_arm64.tar.gz"
+    sha256 "5506c7ad0cb3ebd9c287dbe420c87097127d2da06379fc0405ed41665e4f5142"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_linux_amd64.tar.gz"
-    sha256 "cefd787f700881d5701c98a95a6b11d67b5144473e3189fb957ae764ab6834c7"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.223/health-check_0.1.223_linux_amd64.tar.gz"
+    sha256 "12e79a8b6bc113273cc64caf8453545c6438e28c5068a8febd92b9de32291044"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_linux_armv6.tar.gz"
-    sha256 "36923b357c554ece68b6b3ad7b0508e7e327032a68399d39e6f4d8db0dd25506"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.223/health-check_0.1.223_linux_armv6.tar.gz"
+    sha256 "b7325ecf1a2453d9977502efa725abca973d5958e8b95d414724cb4f84f8555c"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_linux_arm64.tar.gz"
-    sha256 "eac0a1753a454f881f8efccdc1d49bc1f3d8b333f947340e67638a168c219faa"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.223/health-check_0.1.223_linux_arm64.tar.gz"
+    sha256 "5f4f7e3aa3b505f56bed3390f5e77209bb6dbe821f82f8f55519e63d1062dcb2"
   end
 
   def install
