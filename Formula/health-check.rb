@@ -5,20 +5,28 @@
 class HealthCheck < Formula
   desc "The `health-check` command line tool concurrently checks all target groups's health status"
   homepage "https://warrensbox.github.io/health-check"
-  version "0.1.210"
+  version "0.1.215"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.210/health-check_0.1.210_darwin_amd64.tar.gz"
-    sha256 "9f9941b46db20051346322bbae1817eba556f0a227bbdb9b6efdfb5d64fd7cac"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_darwin_amd64.tar.gz"
+    sha256 "f1feeac21aaa3508f62081886b688023ae4eb5c2ed747e5fecb926d424aefd03"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_darwin_arm64.tar.gz"
+    sha256 "199fbf7c384ac1946a58d914f6d5881a22867181e0a2a9809d3f05ed1361af90"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.210/health-check_0.1.210_linux_amd64.tar.gz"
-    sha256 "b8a2a6e54d3dac6ad92ac2f5513c8d18519c20ead11261a0ed11678b71471852"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_linux_amd64.tar.gz"
+    sha256 "cefd787f700881d5701c98a95a6b11d67b5144473e3189fb957ae764ab6834c7"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.210/health-check_0.1.210_linux_armv6.tar.gz"
-    sha256 "83d73202d91ab67968117c36cbcce8f156c46b90148d72f3c12c4abd583a0b3e"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_linux_armv6.tar.gz"
+    sha256 "36923b357c554ece68b6b3ad7b0508e7e327032a68399d39e6f4d8db0dd25506"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.215/health-check_0.1.215_linux_arm64.tar.gz"
+    sha256 "eac0a1753a454f881f8efccdc1d49bc1f3d8b333f947340e67638a168c219faa"
   end
 
   def install
