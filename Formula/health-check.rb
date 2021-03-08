@@ -5,21 +5,20 @@
 class HealthCheck < Formula
   desc "The `health-check` command line tool concurrently checks all target groups's health status"
   homepage "https://warrensbox.github.io/health-check"
-  version "0.1.198"
+  version "0.1.210"
   bottle :unneeded
-  depends_on :linux
 
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.210/health-check_0.1.210_darwin_amd64.tar.gz"
+    sha256 "9f9941b46db20051346322bbae1817eba556f0a227bbdb9b6efdfb5d64fd7cac"
+  end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.198/health-check_0.1.198_linux_amd64.tar.gz"
-    sha256 "e8a2642b9edf73bf287e9493e0c20b245f84dac2774e59255b449638ab9386bf"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.210/health-check_0.1.210_linux_amd64.tar.gz"
+    sha256 "b8a2a6e54d3dac6ad92ac2f5513c8d18519c20ead11261a0ed11678b71471852"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.198/health-check_0.1.198_linux_armv6.tar.gz"
-    sha256 "84b38bea38e3b9de36f74ee216cb16c3b628d03dd233d990379e31c8f437c214"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.198/health-check_0.1.198_linux_arm64.tar.gz"
-    sha256 "cdf52eb84a27edfc582f1301d58e60f77d9b2e6c9db9894590e6a8c3c2f62e9b"
+    url "https://github.com/warrensbox/health-check/releases/download/0.1.210/health-check_0.1.210_linux_armv6.tar.gz"
+    sha256 "83d73202d91ab67968117c36cbcce8f156c46b90148d72f3c12c4abd583a0b3e"
   end
 
   def install
