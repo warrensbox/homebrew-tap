@@ -5,32 +5,32 @@
 class Hubapp < Formula
   desc "The hubapp command lets you install binary application from github"
   homepage "https://warrensbox.github.io/hubapp"
-  version "0.3.18"
+  version "0.3.19"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.18/hubapp_0.3.18_darwin_amd64.tar.gz"
-      sha256 "d31c9794124f6cd7b98c9616aa264dd745a2dbbbcdaf0f3cf0d3650658b0cc2f"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.19/hubapp_0.3.19_darwin_amd64.tar.gz"
+      sha256 "38a45a19a4a7d8d2bdcacef1f24198605e2c3bb0b7cc73597cf4a45f8120bde9"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.18/hubapp_0.3.18_darwin_arm64.tar.gz"
-      sha256 "f1444f0412c767b6dfd258e51799c3f34bf7d21c79dc1802cab861b5ea4324a5"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.19/hubapp_0.3.19_darwin_arm64.tar.gz"
+      sha256 "eafc7f42444ee5d1f50ada7bf972975d289ddb363070cb691037bb5a313ccd9a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.18/hubapp_0.3.18_linux_amd64.tar.gz"
-      sha256 "2347368a0a15b3bd21640ac562572b1cd79232ef2fed21565242e18b6b9ae199"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.19/hubapp_0.3.19_linux_amd64.tar.gz"
+      sha256 "c4d17192ce4939598a662308f6dac4464b576e73f7bf93d90d8c3577ab764c90"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.18/hubapp_0.3.18_linux_armv6.tar.gz"
-      sha256 "88aad3642810aa438db00739d9c846ffd39ac71feb1890d421f8ff86f4fee007"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.19/hubapp_0.3.19_linux_armv6.tar.gz"
+      sha256 "128e7f26e0f685ff87eb80c1409932b2080a3aabeaf680b57a83b53b30a3ecec"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.18/hubapp_0.3.18_linux_arm64.tar.gz"
-      sha256 "c036bb583272b8c47811491a5b5832624e7269cfebb1eb5d3b55b236a2282e71"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.19/hubapp_0.3.19_linux_arm64.tar.gz"
+      sha256 "668d10024eff9549c74cb44608c2b627efa83a5a09d469f515e247b538f6567d"
     end
   end
 
