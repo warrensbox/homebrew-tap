@@ -5,32 +5,32 @@
 class Tfswitch < Formula
   desc "The tfswitch command lets you switch between terraform versions."
   homepage "https://warrensbox.github.io/terraform-switcher"
-  version "0.12.1097"
+  version "0.12.1119"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1097/terraform-switcher_0.12.1097_darwin_amd64.tar.gz"
-      sha256 "a8a13a9574fb7c2e31f7354cfd9a7b85cba89e1838f21b58225620190d3ffeeb"
+      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1119/terraform-switcher_0.12.1119_darwin_amd64.tar.gz"
+      sha256 "e9a8ac9b1a89a02cc5b7f0619521bc4ce8ce365811f7fb5cddb575023c1cbc37"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1097/terraform-switcher_0.12.1097_darwin_arm64.tar.gz"
-      sha256 "a3a8a87f8551ae42e9bcc7724f12fe69c1f6d7a956ee9516c949bc7c9b780c7d"
+      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1119/terraform-switcher_0.12.1119_darwin_arm64.tar.gz"
+      sha256 "b76e3138844bab142385b8274a7a88490f881ad2b4161ad741c5380554e371e6"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1097/terraform-switcher_0.12.1097_linux_amd64.tar.gz"
-      sha256 "ea739e10924797ba8b913c792fc6c894fffcb9eaf7cffa80b922f3f4e1648036"
+      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1119/terraform-switcher_0.12.1119_linux_amd64.tar.gz"
+      sha256 "5d4870a41e388136418fc94e52c50ec076a2fb9404560ef89b4ea187f6fd8854"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1097/terraform-switcher_0.12.1097_linux_armv6.tar.gz"
-      sha256 "391442f89a3f2eaa1580509e0fab296ddb28d1327cd83c9ab84032d0731b0422"
+      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1119/terraform-switcher_0.12.1119_linux_armv6.tar.gz"
+      sha256 "0a067ee5083f2587f3612247ed35452c602a72e39d3f813702c9d8b3eba755c2"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1097/terraform-switcher_0.12.1097_linux_arm64.tar.gz"
-      sha256 "b88688aff141245b5ab7d26e64a74ca6027c80b9b30cff99fb0d4b7f7741346e"
+      url "https://github.com/warrensbox/terraform-switcher/releases/download/0.12.1119/terraform-switcher_0.12.1119_linux_arm64.tar.gz"
+      sha256 "48c28048625407a78545029f04b182cf902d9cbb116d5a12ae026c509a4b37f6"
     end
   end
 
