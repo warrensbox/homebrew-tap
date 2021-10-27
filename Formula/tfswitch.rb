@@ -6,7 +6,6 @@ class Tfswitch < Formula
   desc "The tfswitch command lets you switch between terraform versions."
   homepage "https://warrensbox.github.io/terraform-switcher"
   version "0.12.1168"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
