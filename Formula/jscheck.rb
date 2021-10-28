@@ -3,7 +3,6 @@ class Jscheck < Formula
   desc "Recursively lint checks json files in you current directory and subdirectories."
   homepage "https://github.com/warrensbox/jscheck"
   version "0.1.102"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/warrensbox/jscheck/releases/download/0.1.102/jscheck_0.1.102_darwin_amd64.tar.gz"

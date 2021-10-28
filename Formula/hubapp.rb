@@ -6,7 +6,6 @@ class Hubapp < Formula
   desc "The hubapp command lets you install binary application from github"
   homepage "https://warrensbox.github.io/hubapp"
   version "0.3.21"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
