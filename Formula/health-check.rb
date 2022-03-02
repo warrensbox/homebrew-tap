@@ -6,7 +6,6 @@ class HealthCheck < Formula
   desc "The `health-check` command line tool concurrently checks all target groups's health status"
   homepage "https://warrensbox.github.io/health-check"
   version "0.1.226"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/warrensbox/health-check/releases/download/0.1.226/health-check_0.1.226_darwin_amd64.tar.gz"
