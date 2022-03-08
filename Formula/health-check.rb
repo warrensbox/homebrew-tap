@@ -5,32 +5,52 @@
 class HealthCheck < Formula
   desc "The `health-check` command line tool concurrently checks all target groups's health status"
   homepage "https://warrensbox.github.io/health-check"
-  version "0.1.226"
-  bottle :unneeded
+  version "0.2.241"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.226/health-check_0.1.226_darwin_amd64.tar.gz"
-    sha256 "6ad1c319fe60df8f0f6f62421fe78344b3122c7b2609bb603f8878c4dd599fa9"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.226/health-check_0.1.226_darwin_arm64.tar.gz"
-    sha256 "9dff0aa9dbf9f08161b075bc26960b6d4f1021f98961ebf1fcba4259bb5f7b17"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.226/health-check_0.1.226_linux_amd64.tar.gz"
-    sha256 "3fe2ad4f1f4e16ebf05cfdfaa295d9cc0f9f34e7f59cd03680edd4d5c4728af8"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.226/health-check_0.1.226_linux_armv6.tar.gz"
-    sha256 "d4f310867a4733a8613dc05de2b8c6c0ac6f8b6842eebba391cc538d06c68e83"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/warrensbox/health-check/releases/download/0.1.226/health-check_0.1.226_linux_arm64.tar.gz"
-    sha256 "2ca1e944578a031e13e0153a7feb8fb16fc1aa99b05ac08f6be1e7545e00b17a"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/warrensbox/health-check/releases/download/0.2.241/health-check_0.2.241_darwin_arm64.tar.gz"
+      sha256 "0c918ed1f15c3e33c89258fb81a7d57357fc349389fe8ee0ab80713333bd408e"
+
+      def install
+        bin.install "health-check"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/warrensbox/health-check/releases/download/0.2.241/health-check_0.2.241_darwin_amd64.tar.gz"
+      sha256 "c7622461f8bf0829469a186c19df6b94f193c1360151d1075ebabc3d2f8ff0f3"
+
+      def install
+        bin.install "health-check"
+      end
+    end
   end
 
-  def install
-    bin.install "health-check"
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/warrensbox/health-check/releases/download/0.2.241/health-check_0.2.241_linux_armv6.tar.gz"
+      sha256 "62f01d36ff59b2067959ebdbd8b6ab24fba4d666ce96949a8bc4297694571ab3"
+
+      def install
+        bin.install "health-check"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/warrensbox/health-check/releases/download/0.2.241/health-check_0.2.241_linux_arm64.tar.gz"
+      sha256 "c1455789d72bc5707040b669224fe3e2b490d9e72a252b9d000995b27b34f268"
+
+      def install
+        bin.install "health-check"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/warrensbox/health-check/releases/download/0.2.241/health-check_0.2.241_linux_amd64.tar.gz"
+      sha256 "f394c3d5e52efa0aeea3fb52cfb052ef644091fe926c9ef303170c2ef823bba1"
+
+      def install
+        bin.install "health-check"
+      end
+    end
   end
 
   def caveats; <<~EOS
