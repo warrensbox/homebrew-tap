@@ -5,37 +5,52 @@
 class Hubapp < Formula
   desc "The hubapp command lets you install binary application from github"
   homepage "https://warrensbox.github.io/hubapp"
-  version "0.3.21"
-  bottle :unneeded
+  version "0.3.23"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.21/hubapp_0.3.21_darwin_amd64.tar.gz"
-      sha256 "7e07540ebe826dfe905e1b7f7f129532132cf68af8a8191af037a5eaeacb93a7"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.21/hubapp_0.3.21_darwin_arm64.tar.gz"
-      sha256 "d47bb09de2d8f342f6978c540e4df82541b5f61b23ba326006d5cdf0dd967fc1"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.23/hubapp_0.3.23_darwin_arm64.tar.gz"
+      sha256 "c36f244cc688540ea3c9c404654c9edb3ff3499293efd7142ff5711fc7695e9c"
+
+      def install
+        bin.install "hubapp"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.23/hubapp_0.3.23_darwin_amd64.tar.gz"
+      sha256 "085750b2f5cd49773fba246c20b3d13dd7096a117b535e6e408364a9b3d25f7c"
+
+      def install
+        bin.install "hubapp"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.21/hubapp_0.3.21_linux_amd64.tar.gz"
-      sha256 "1fff873155e96fe6fd89393f949551ca6d41a040f81e94bc4b191c6fa306b266"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.23/hubapp_0.3.23_linux_amd64.tar.gz"
+      sha256 "ec3f2eac1eee08c2084f7e3360259a1b2f027d81473310aecb78f05b80c7e709"
+
+      def install
+        bin.install "hubapp"
+      end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.21/hubapp_0.3.21_linux_armv6.tar.gz"
-      sha256 "7ecdfb185cf12a6bea2e3441c670a0939b794d66cdbfe3343c6f94682bcc1406"
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.23/hubapp_0.3.23_linux_armv6.tar.gz"
+      sha256 "d543464b61b8a39c81b7ff04457275396aa27d32ff322d93a038a50dc90047ed"
+
+      def install
+        bin.install "hubapp"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/hubapp/releases/download/0.3.21/hubapp_0.3.21_linux_arm64.tar.gz"
-      sha256 "c8235257e9bfa260432e9a270e2f23fb9d8a5f3a406e3afd63e3fb9b34cafce6"
-    end
-  end
+      url "https://github.com/warrensbox/hubapp/releases/download/0.3.23/hubapp_0.3.23_linux_arm64.tar.gz"
+      sha256 "034b0e0ec77fe7aee510c5a87ea1745e9e0c045124970ae860d094cad77ec62e"
 
-  def install
-    bin.install "hubapp"
+      def install
+        bin.install "hubapp"
+      end
+    end
   end
 
   def caveats; <<~EOS
