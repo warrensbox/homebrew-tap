@@ -5,20 +5,20 @@
 class Tgswitch < Formula
   desc "The tgswitch command lets you switch between terragrunt versions."
   homepage "https://warrensbox.github.io/tgswitch"
-  version "0.5.382"
+  version "0.5.389"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.382/tgswitch_0.5.382_darwin_arm64.tar.gz"
-      sha256 "1cf5f28f0d0ef81dfe8edb954923001734b4cb99713fb63a6cb1c0cea34fd638"
+      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.389/tgswitch_0.5.389_darwin_arm64.tar.gz"
+      sha256 "f050d2777572eb556bb82a58a3a4bbcbf3c8d554f58f1863c434ed53dd385b99"
 
       def install
         bin.install "tgswitch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.382/tgswitch_0.5.382_darwin_amd64.tar.gz"
-      sha256 "2322d5565d82717d336dd07252fddab826eb98a3ccfa7746b419d8366955d5a0"
+      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.389/tgswitch_0.5.389_darwin_amd64.tar.gz"
+      sha256 "da8d04061840aa33a2ad3f2cf120675183729faaa08084ba3d3218e589d05b87"
 
       def install
         bin.install "tgswitch"
@@ -28,24 +28,24 @@ class Tgswitch < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.382/tgswitch_0.5.382_linux_armv6.tar.gz"
-      sha256 "9322af672d1314524a79d93a6772fcd5a06e5e3fb204512c3320c2bd0f4a1112"
+      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.389/tgswitch_0.5.389_linux_armv6.tar.gz"
+      sha256 "f334a99c8a4d097ec7f60fa76b24d49db08592824f8c4650bad681f760bcf323"
 
       def install
         bin.install "tgswitch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.382/tgswitch_0.5.382_linux_arm64.tar.gz"
-      sha256 "9f38fd17c9fabf0d0960f897d7f3c2df7bb0ea2c2dd440c2ba390e94b19c0ac6"
+      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.389/tgswitch_0.5.389_linux_arm64.tar.gz"
+      sha256 "cac7c34cab7021242e8dac3053fb0e4e0cf436b8b3b116fa9cc45a1a49b446cc"
 
       def install
         bin.install "tgswitch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.382/tgswitch_0.5.382_linux_amd64.tar.gz"
-      sha256 "c0256b196c6d684b2d26230a88d7a3dfc9de13afb9787bacc20cdc54b1ee7db2"
+      url "https://github.com/warrensbox/tgswitch/releases/download/0.5.389/tgswitch_0.5.389_linux_amd64.tar.gz"
+      sha256 "2aa0c20669d8868c427d4b783645ab67666da779b9b3aa62257f110683dc0117"
 
       def install
         bin.install "tgswitch"
