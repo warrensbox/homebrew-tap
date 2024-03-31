@@ -5,20 +5,20 @@
 class Hubapp < Formula
   desc "The hubapp command lets you install binary application from github"
   homepage "https://warrensbox.github.io/hubapp"
-  version "1.1.9"
+  version "1.1.10"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/warrensbox/hubapp/releases/download/1.1.9/hubapp_Darwin_arm64.tar.gz"
-      sha256 "ad6ab2cc5ab9418b5c5736978abda62dc1e1be2021b6fb1c41496f3be12f843c"
+    if Hardware::CPU.intel?
+      url "https://github.com/warrensbox/hubapp/releases/download/1.1.10/hubapp_ 1.1.10_Darwin_x86_64.tar.gz"
+      sha256 "a7c39cf2219ef5941307e594d372dc22a8318ea69679ebc56fb8d707115765eb"
 
       def install
         bin.install "hubapp"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/hubapp/releases/download/1.1.9/hubapp_Darwin_x86_64.tar.gz"
-      sha256 "07d7f2e07204eb97ab387f9e02a3aa5120f85f0529abef5d97f3a472c153d162"
+    if Hardware::CPU.arm?
+      url "https://github.com/warrensbox/hubapp/releases/download/1.1.10/hubapp_ 1.1.10_Darwin_arm64.tar.gz"
+      sha256 "69ca4feaf3a3bd17fd278f4bf5b9e778141d8c0aa794be3cad9e374b85d75e9a"
 
       def install
         bin.install "hubapp"
@@ -27,25 +27,25 @@ class Hubapp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/warrensbox/hubapp/releases/download/1.1.9/hubapp_Linux_x86_64.tar.gz"
-      sha256 "8252a86f96e3e97ff9e044e59c0d17affa40285de643168979ac80361d0eae92"
-
-      def install
-        bin.install "hubapp"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/hubapp/releases/download/1.1.9/hubapp_Linux_arm64.tar.gz"
-      sha256 "d09e2387ba28cbc5b3054e60862c4f3d689d9beb2e1842c35adfcc9452540e2f"
+      url "https://github.com/warrensbox/hubapp/releases/download/1.1.10/hubapp_ 1.1.10_Linux_arm64.tar.gz"
+      sha256 "790d3a975f511a1a660438c7fbf3a2f4f9e515a2ffbd6e0f96e86aa2e3527bf2"
 
       def install
         bin.install "hubapp"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/warrensbox/hubapp/releases/download/1.1.9/hubapp_Linux_armv6.tar.gz"
-      sha256 "87ce528a76c2b80cbb0bb0a14b9716306a40fac170f0983ad4b2e0eb0a6b9260"
+      url "https://github.com/warrensbox/hubapp/releases/download/1.1.10/hubapp_ 1.1.10_Linux_armv6.tar.gz"
+      sha256 "d088a51f3fd4d44bbe048266d230c3b41247e9da2131dc06542157ce2e31c7bd"
+
+      def install
+        bin.install "hubapp"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/warrensbox/hubapp/releases/download/1.1.10/hubapp_ 1.1.10_Linux_x86_64.tar.gz"
+      sha256 "25d5eae75941ff6a1c0ef2de4aebd350d36b4423e50bb8d38146f3b05a95c427"
 
       def install
         bin.install "hubapp"
