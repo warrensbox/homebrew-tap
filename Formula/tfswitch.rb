@@ -5,20 +5,20 @@
 class Tfswitch < Formula
   desc "The tfswitch command lets you switch between terraform versions."
   homepage "https://warrensbox.github.io/terraform-switcher"
-  version "1.2.0"
+  version "1.2.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.0/terraform-switcher_v1.2.0_darwin_amd64.tar.gz"
-      sha256 "8d9d1cfd90840e35109486798b9e8f52a37ccfd2d528990b2e223bdf88935956"
+      url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.1/terraform-switcher_v1.2.1_darwin_amd64.tar.gz"
+      sha256 "8594b89287d8e7a98e6aa0d579954c1cfbc0a383f21aca063bf57e20541c3e10"
 
       def install
         bin.install "tfswitch"
       end
     end
     on_arm do
-      url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.0/terraform-switcher_v1.2.0_darwin_arm64.tar.gz"
-      sha256 "c1dc7cd70e7f84b7807a4bb5ecff434e851e3b3654a7c8c9ac09a29f985b6095"
+      url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.1/terraform-switcher_v1.2.1_darwin_arm64.tar.gz"
+      sha256 "cc651c16bebb1d5985d4d845e03f34edfbb9d16e38d8969088fc6f275c86f8ee"
 
       def install
         bin.install "tfswitch"
@@ -29,8 +29,8 @@ class Tfswitch < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.0/terraform-switcher_v1.2.0_linux_amd64.tar.gz"
-        sha256 "43ba6bf3060d96b0cab17e682f7b5a3fae96823410098bd2d4d935d584a70e34"
+        url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.1/terraform-switcher_v1.2.1_linux_amd64.tar.gz"
+        sha256 "e30049dbc4080678ad45c63a60f130d25e95d6d32cd667a87a16e66a79b46272"
 
         def install
           bin.install "tfswitch"
@@ -39,8 +39,8 @@ class Tfswitch < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.0/terraform-switcher_v1.2.0_linux_armv6.tar.gz"
-        sha256 "364d4bca95ba6681be1ac09050a2aeb691533c20fcd93c1a6e5218ccc7c0f255"
+        url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.1/terraform-switcher_v1.2.1_linux_armv6.tar.gz"
+        sha256 "0ccb563677faca89352d190bfc8f6bbfa8fce1f666dfd621c783a92d222ec9c3"
 
         def install
           bin.install "tfswitch"
@@ -49,8 +49,8 @@ class Tfswitch < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.0/terraform-switcher_v1.2.0_linux_arm64.tar.gz"
-        sha256 "3ca84e0b926c491311e28f1127b215c3d854cc1e91f1bf4732e57a304693d942"
+        url "https://github.com/warrensbox/terraform-switcher/releases/download/v1.2.1/terraform-switcher_v1.2.1_linux_arm64.tar.gz"
+        sha256 "67b818d0d1e20ffdb1dfabe54d0697cb33ffc741f33b30597eb51acedd29d3ae"
 
         def install
           bin.install "tfswitch"
