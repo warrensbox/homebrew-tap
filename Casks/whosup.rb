@@ -36,9 +36,9 @@ cask "whosup" do
   zsh_completion "completions/_whosup"
   fish_completion "completions/whosup.fish"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/whosup"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/whosup"]
     end
   end
 
